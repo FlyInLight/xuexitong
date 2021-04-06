@@ -9,10 +9,14 @@
 
 *提示：16倍速下对电脑性能和网速要求较高，请先确保环境再操作否则会卡顿*
 *测试环境：chrome浏览器*
+
 **步骤一：** 首先打开课程视频，按F12打开开发者工具，找到console控制台
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021040617423965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
+
 **步骤二：** 在console控制台粘贴以下代码：
 其中第40行"v.playbackRate = 16;"是设置16倍速，根据电脑配置和当前网速可以自定义修改，经过测试16倍以上容易出错
+
 ```
 window.unitCount = $(".ncells h4").index($(".currents")) + 1;
 // 获取小节数量
@@ -82,10 +86,18 @@ function nextUnit(){
 console.log("%c 欢迎使用本脚本，此科目有%c %d %c个小节，当前为 %c第%d小节 %c-chao", "color:#6dbcff", "color:red", window.unit, "color:#6dbcff", "color:red", window.unitCount, "font-size:8px");
 main();
 ```
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406174846992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
-**步骤三：** 粘好后按enter回车，可以看到视频已经按16倍速抽搐播放！！！![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406174926318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
+
+**步骤三：** 粘好后按enter回车，可以看到视频已经按16倍速抽搐播放！！！
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406174926318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
+
 **步骤四：** 正常视频播放完毕是可以自动播放下一个的，但是有的视频后面有章节测验，这会导致当前视频循环播放，所以看完视频拿到绿色任务点后要把题做了,但是这时后点击章节测验会出现在调试器中暂停的提示，按F12关闭开发者工具即可
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406175229767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
+
 **步骤五：** 做完题提交后点击下一章继续刷视频，因为做题时间可能比较长所以脚本大概率会挂掉，所以这时后按下F12,goto步骤一
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406180905333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
 代码思路参考GitHub的大哥：https://github.com/chengjunchao/xuexitongScript/blob/master/xuexitong.js
