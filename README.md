@@ -82,9 +82,5 @@ main();
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406174926318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
 
-**步骤四：** 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406175229767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
 
-**步骤五：** 做完题提交后点击下一章继续刷视频，因为做题时间可能比较长所以脚本大概率会挂掉，所以这时后按下F12,goto步骤一
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406180905333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
+视频刷完章节测验试题做一下
