@@ -1,14 +1,5 @@
 # 浏览器控制台创建js脚本,破解学习通网课16倍速播放,和鼠标焦点锁定
 
-问题描述： (未解决)学习通网课的视频无法拖动进度条
-已解决：
-没有倍速播放——破解1-16倍速
-鼠标离开页面视频会暂停——鼠标可以离开页面
-视频播放会弹出小练习必须通过才能继续播放——可以不用做小练习直接播放视频
- - 之前有可以拖进度条的漏洞，现在不知道被改哪去了我比较菜没找到；
- - 不过终于被我get到了另一种方法，通过直接在控制台运行javascript脚本修改视频的倍速，经过测试最高16倍比较稳定，再高容易出错；
- - 本来想在此基础上搞全自动的做题翻页，但是太懒了呃呃呃有肉吃就不想继续了
-
 *提示：16倍速下对电脑性能和网速要求较高，请先确保环境再操作否则会卡顿*
 *测试环境：chrome浏览器*
 
@@ -91,11 +82,9 @@ main();
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406174926318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
 
-**步骤四：** 正常视频播放完毕是可以自动播放下一个的，但是有的视频后面有章节测验，这会导致当前视频循环播放，所以看完视频拿到绿色任务点后要把题做了,但是这时后点击章节测验会出现在调试器中暂停的提示，按F12关闭开发者工具即可
-
+**步骤四：** 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406175229767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
 
 **步骤五：** 做完题提交后点击下一章继续刷视频，因为做题时间可能比较长所以脚本大概率会挂掉，所以这时后按下F12,goto步骤一
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210406180905333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2EyMjcyMDYyOTY4,size_16,color_FFFFFF,t_70)
-代码思路参考GitHub的大哥：https://github.com/chengjunchao/xuexitongScript/blob/master/xuexitong.js
