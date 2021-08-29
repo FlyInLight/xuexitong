@@ -19,8 +19,10 @@
 **步骤二：** 在console控制台粘贴以下代码：
 其中第40行"v.playbackRate = 16;"是设置16倍速，根据电脑配置和当前网速可以自定义修改，经过测试16倍以上容易出错
 
+//2021/8/29更新 - 自动跳过下一集
 ```
 window.unitCount = $(".ncells h4").index($(".currents")) + 1;
+
 // 获取小节数量
 window.unit = $(".ncells h4").length;
 
@@ -33,13 +35,8 @@ function main(){
         // 添加事件处理程序
         addEventListener("playdone" ,()=>{
             v_done++;
-            if(v_done > videoNum){
-                // 下一节
-            } else if(v_done < videoNum){
-                watchVideo(frameObj, v_done)
-            } else {
-                console.log("%c本小节视频播放完毕，等待跳转至下一小节...","font-size:18px");nextUnit();
-            }
+            watchVideo(frameObj, v_done)
+
         });
         // 播放
         watchVideo(frameObj, v_done);
@@ -48,7 +45,7 @@ function main(){
             console.log("%c当前小节中无视频，6秒后将跳转至下一节","font-size:18px");
             nextUnit();
         } else {
-            console.log("%c结束","color:red;font-size:18px");
+            console.log("%c好了好了，毕业了","color:red;font-size:18px");
         }
     }
 }
@@ -81,11 +78,10 @@ function nextUnit(){
     setTimeout(() => {
         $(document).scrollTop($(document).height()-$(window).height());
         $(".orientationright").click();
-        console.log("%c正在跳转下一节，如有章节测试则无法跳转，请先完成测试","color:red;font-size:18px");// (已经跳转" +(++window.unitCount)+"次)");
+        console.log("%c行了别看了，我知道你学会了，下一节","color:red;font-size:18px");// (已经跳转" +(++window.unitCount)+"次)");
         if(window.unitCount++ < window.unit){ setTimeout(() => main(), 10000) }
     }, 6000);
 }
-console.log("%c 欢迎使用本脚本，此科目有%c %d %c个小节，当前为 %c第%d小节 %c-chao", "color:#6dbcff", "color:red", window.unit, "color:#6dbcff", "color:red", window.unitCount, "font-size:8px");
 main();
 ```
 
